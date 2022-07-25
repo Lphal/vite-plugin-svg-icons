@@ -21,6 +21,12 @@ export interface ViteSvgIconsPlugin {
   symbolId?: string
 
   /**
+   * filename will not contain dir info
+   * @default: false
+   */
+  cleanName?: boolean
+
+  /**
    * icon format
    * @default: body-last
    */

@@ -22,3 +22,12 @@ test('createSymbolId Not dir', () => {
 
   expect(id).toBe('icon-dir/file')
 })
+
+test('createSymbolId Not dir, enable pureName', () => {
+  const id = createSymbolId('dir/file.svg', {
+    symbolId: 'icon-[name]',
+    cleanName: true,
+  } as any)
+
+  expect(id).toBe('icon-file')
+})

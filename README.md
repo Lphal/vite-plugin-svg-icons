@@ -39,6 +39,11 @@ export default () => {
         iconDirs: [path.resolve(process.cwd(), 'src/icons')],
         // Specify symbolId format
         symbolId: 'icon-[dir]-[name]',
+        /**
+         * filename will not contain dir info
+         * @default: false
+         */
+        cleanName?: boolean
 
         /**
          * custom insert position
@@ -202,6 +207,7 @@ import ids from 'virtual:svg-icons-names'
 | ----------- | ---------------------- | --------------------- | ------------------------------------------------------------------------------------- |
 | iconDirs    | `string[]`             | -                     | Need to generate the icon folder of the Sprite image                                  |
 | symbolId    | `string`               | `icon-[dir]-[name]`   | svg symbolId format, see the description below                                        |
+| cleanName   | `cleanName`            | `false`               | filename will not contain dir info                                                    |
 | svgoOptions | `boolean｜SvgoOptions` | `true`                | svg compression configuration, can be an object[Options](https://github.com/svg/svgo) |
 | inject      | `string`               | `body-last`           | svgDom default insertion position, optional `body-first`                              |
 | customDomId | `string`               | `__svg__icons__dom__` | Customize the ID of the svgDom insert node                                            |

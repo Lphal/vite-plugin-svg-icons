@@ -250,7 +250,7 @@ export async function compilerIcon(
 }
 
 export function createSymbolId(name: string, options: ViteSvgIconsPlugin) {
-  const { symbolId } = options
+  const { symbolId, cleanName = false } = options
 
   if (!symbolId) {
     return name
@@ -265,6 +265,9 @@ export function createSymbolId(name: string, options: ViteSvgIconsPlugin) {
     if (!dirName) {
       id = id.replace('--', '-')
     }
+    fName = fileName
+  }
+  if (cleanName) {
     fName = fileName
   }
   id = id.replace(/\[name\]/g, fName)

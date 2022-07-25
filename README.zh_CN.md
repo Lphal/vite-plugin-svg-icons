@@ -41,6 +41,12 @@ export default () => {
         symbolId: 'icon-[dir]-[name]',
 
         /**
+         * 文件名称不包含目录信息
+         * @default: false
+         */
+        cleanName?: boolean
+
+        /**
          * 自定义插入位置
          * @default: body-last
          */
@@ -173,6 +179,7 @@ import ids from 'virtual:svg-icons-names'
 | ----------- | ---------------------- | --------------------- | -------------------------------------------------------------- |
 | iconDirs    | `string[]`             | -                     | 需要生成雪碧图的图标文件夹                                     |
 | symbolId    | `string`               | `icon-[dir]-[name]`   | svg 的 symbolId 格式，见下方说明                               |
+| cleanName   | `boolean`              | `false`               | 文件名称不包含目录信息                                         |
 | svgoOptions | `boolean｜SvgoOptions` | `true`                | svg 压缩配置，可以是对象[Options](https://github.com/svg/svgo) |
 | inject      | `string`               | `body-last`           | svgDom 默认插入的位置，可选`body-first`                        |
 | customDomId | `string`               | `__svg__icons__dom__` | svgDom 插入节点的 ID                                           |
