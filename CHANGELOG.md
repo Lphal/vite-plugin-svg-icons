@@ -1,5 +1,9 @@
 ## [2.0.2](https://github.com/Lphal/vite-plugin-svg-icons/compare/v2.0.2...v2.0.1) (2022-07-25)
 
+### Features
+
+- support clean name, symbolId will not contain dir info
+
 ## [2.0.1](https://github.com/anncwb/vite-plugin-svg-icons/compare/v1.0.1...v2.0.1) (2022-01-29)
 
 ### Bug Fixes
